@@ -57,9 +57,7 @@
     "typescript": "^5.1.6"
   },
   "engines": {
-    "node": "20.x"
-  },
-  "ct3aMetadata": {
-    "initVersion": "7.26.0"
+    "node": "20.x",
+    "npm": ">=9.0.0"
   }
 }
