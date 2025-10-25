@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsc --noEmit && next build",
+    "build": "npx tsc --noEmit && next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "type-check": "tsc --noEmit",
+    "type-check": "npx tsc --noEmit",
     "format": "prettier --write ./src/**/*.{ts,tsx,js,jsx,json,md}"
   },
   "dependencies": {
