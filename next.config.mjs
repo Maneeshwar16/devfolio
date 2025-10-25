@@ -11,8 +11,6 @@ const config = withPWA({
   register: true,
   scope: '/',
   sw: 'service-worker.js',
-  skipWaiting: true,
-  runtimeCaching: [],
 })({
   reactStrictMode: true,
 
