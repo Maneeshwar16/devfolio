@@ -8,7 +8,6 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "types": ["node"],
 
     /* Strictness */
     "strict": true,
@@ -32,8 +31,9 @@
   },
   "include": [
     "next-env.d.ts",
-    "src/**/*",
-    "src/types/*.d.ts"
+    "src/types/env.d.ts",
+    "src/types/css.d.ts",
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
