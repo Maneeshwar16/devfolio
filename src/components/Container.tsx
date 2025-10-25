@@ -229,7 +229,7 @@ export default function Container(props: ContainerProps) {
             </motion.div>
           )}
         </AnimatePresence>
-        <style jsx global>{`
+        <style>{`
           html,
           body {
             overflow-y: ${isOpen ? "hidden" : "initial"};

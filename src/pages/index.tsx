@@ -30,7 +30,6 @@ import {
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
-import { title } from "process";
 
 const aboutStats = [
   { label: "Years of learning", value: "4+" },

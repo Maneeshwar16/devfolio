@@ -31,7 +31,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "src/**/*"
+    "src/**/*",
+    "src/types/*.d.ts"
   ],
   "exclude": [
     "node_modules",
