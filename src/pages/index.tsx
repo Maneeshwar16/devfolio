@@ -1,6 +1,6 @@
-import Container from "@/components/Container";
 import { useEffect, useRef, Suspense, useState } from "react";
 import styles from "@/styles/Home.module.css";
+import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
@@ -11,10 +11,14 @@ import {
   MonitorSmartphone,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
-import Spline from "@splinetool/react-spline";
+import dynamic from 'next/dynamic';
 import Link from "next/link";
 import { cn, scrollTo } from "@/lib/utils";
 import Image from "next/image";
+
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
+  ssr: false,
+});
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
@@ -96,10 +100,12 @@ export default function Home() {
     const navLinks = document.querySelectorAll(".nav-link");
 
     async function getLocomotive() {
-      const Locomotive = (await import("locomotive-scroll")).default;
-      new Locomotive({
-        el: refScrollContainer.current ?? new HTMLElement(),
-        smooth: true,
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      new LocomotiveScroll({
+        lenisOptions: {
+          smoothWheel: true,
+          duration: 1.2,
+        }
       });
     }
 
